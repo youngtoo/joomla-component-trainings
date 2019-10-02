@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_corporatetraining/models/rules" >
+	<fieldset>
+		<field
+				name="id"
+				type="hidden"
+				/>
+        <field
+				name="catid"
+				type="category"
+				extension="com_corporatetraining"
+				class="inputbox"
+				default=""
+				label="Course Category"
+				description="Choose your Course category"
+				required="true"
+		        >
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+
+		<field
+				name="coursename"
+				type="text"
+				label="Name of Course"
+				description="Name of the course offered"
+				size="40"
+				validate="coursename"
+				required="true"
+				class="inputbox validate-coursename"
+				default=""
+				/>
+
+		<field
+				name="location"
+				type="text"
+				label="Location"
+				description="Venue of the course"
+				size="40"
+				
+				class="inputbox"
+				default=""
+				/>
+		<fieldset>
+				<field 	
+					name="datefrom" 
+					type="calendar" 
+					label="From: " 
+					description="From Date"
+					class="input-small" 
+					required="true" 
+					filter="user_utc"
+					showtime="false"
+					todaybutton="false" 
+					filltable="false" 
+					translateformat="true" />
+				
+				<field 	
+					name="dateto" 
+					type="calendar" 
+					label="From: " 
+					description="To Date"
+					class="input-small" 
+					required="true" 
+					filter="user_utc"
+					showtime="false"
+					todaybutton="false" 
+					filltable="false" 
+					translateformat="true" />
+				
+				<field 	
+					name="datenext" 
+					type="calendar" 
+					label="Next Date: " 
+					description="Next Date"
+					class="input-small" 
+					required="true" 
+					filter="user_utc"
+					showtime="false"
+					todaybutton="false" 
+					filltable="false" 
+					translateformat="true" />
+		</fieldset>
+		
+		<fieldset>
+		<field 	name="overview" 
+				type="editor" 
+				hint="Course Overview" 
+				label="Course Overview" 
+				description="Course overview" 
+				height="300" 
+				filter="safehtml"/>
+		
+		<field 	name="attendance" 
+				type="editor" 
+				hint="Who will attend?" 
+				label="Attendance" 
+				description="Who will attend?" 
+				height="300" 
+				filter="safehtml"/>
+
+		<field 	name="outcomes" 
+				type="editor"  
+				hint="Expected outcomes" 
+				label="Expected outcomes" 
+				description="Expected outcomes" 
+				height="300" 
+				filter="safehtml"/>
+		</fieldset>
+
+
+		<field name="url" disabled="true" type="url" default="http://www.example.com" label="Enter a URL for application" description="" size="10" />
+
+		<field name="myfile" type="filelist" default="" label="Select a file" description="" />
+
+        
+	</fieldset>
+</form>
